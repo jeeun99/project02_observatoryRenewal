@@ -1,14 +1,43 @@
 @charset 'utf-8';
 
 /* section 1 */
+.wrap {
+  overflow: hidden;
+}
 .sec1 {
-  margin: 80px auto;
+  width: calc(100% - var(--gap));
+  max-width: 1440px;
+  margin: auto;
+
+  margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
-  grid-template-rows: repeat(2, 290px);
+  grid-template-rows: repeat(2, 1fr);
   gap: var(--gap);
+  position: relative;
 }
-
+.sec1::before {
+  content: "";
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: -160px;
+  background: center / contain url(../img/mainimg1.png) no-repeat;
+  position: absolute;
+  z-index: 10;
+}
+.sec1::after {
+  content: "";
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  bottom: 0;
+  right: -150px;
+  background: center / contain url(../img/mainimg2.png) no-repeat;
+  position: absolute;
+  z-index: 10;
+}
 .btn {
   position: absolute;
   top: var(--gap);
@@ -44,12 +73,22 @@
 .slider-img {
   display: flex;
   width: 300%;
-  height: 290px;
+  height: 100%;
+  cursor: pointer;
 }
 .slider {
   width: calc(100% / 3);
   overflow: hidden;
   position: relative;
+}
+.slider p {
+  z-index: 10;
+}
+.slider img {
+  transition: 0.3s;
+}
+.slider:hover img {
+  transform: scale(1.2);
 }
 .slider:nth-of-type(3) ~ li {
   display: none;
@@ -143,16 +182,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
 }
 .ban1,
 .ban2,
 .ban3 {
-  height: calc(100% / 3 - 0.5rem);
+  height: calc((100% - 1rem) / 3);
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  padding-top: 20%;
 }
 .ban1:hover img,
 .ban2:hover img,
@@ -162,6 +201,9 @@
 .ban1 > img,
 .ban2 > img,
 .ban3 > img {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
   transition: 0.3s;
 }
 .ban1 > p,
@@ -217,7 +259,7 @@
 .notice.on {
   display: block;
 }
-.notice > div {
+.notice > div > a {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #333;
@@ -225,13 +267,15 @@
   line-height: 1.5;
   width: 100%;
 }
-.notice > div > p {
+.notice > div p {
+  color: var(--txt_color);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 70%;
+  width: 60%;
 }
-.notice > div > span {
+.notice > div span {
+  color: var(--txt_color);
   padding-right: 1rem;
 }
 .qna {
@@ -241,7 +285,7 @@
 .qna.on {
   display: block;
 }
-.qna > div {
+.qna > div > a {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #333;
@@ -249,17 +293,156 @@
   line-height: 1.5;
   width: 100%;
 }
-.qna > div > p {
+.qna > div p {
+  color: var(--txt_color);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   width: 70%;
 }
-.qna > div > span {
+.qna > div span {
+  color: var(--txt_color);
   padding-right: 1rem;
 }
 .weather {
-  border: 1px solid blueviolet;
+  height: 100%;
+  padding: 2rem;
+  color: var(--color_white);
+  background-color: var(--color_secBg);
+  border-radius: 0.5rem;
+}
+.todayWeather_con {
+  height: 50%;
+}
+.todayWeather_con > p {
+  font-size: var(--font20);
+  padding-bottom: 0.5rem;
+}
+.todayWeather_con > div {
+  display: flex;
+}
+.weatherImg {
+  width: 15%;
+  margin-left: 1rem;
+}
+.weatherImg img {
+  object-fit: contain;
+}
+.weatherDis {
+  width: 70%;
+  padding-left: 2rem;
+  line-height: 1.5;
+}
+.weekWeather_con {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.weekWeather_con > p {
+  width: 100%;
+  font-size: var(--font20);
+}
+
+.weekWeather {
+  display: flex;
+  justify-content: space-between;
+}
+.weekWeather > div {
+  width: calc((100% - 6rem) / 7);
+  padding-top: 0.5rem;
+}
+.weekWeather .inner img {
+  object-fit: contain;
+}
+.weekWeather p {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.weekWeather > div:nth-of-type(6) {
+  color: #afb7ff;
+}
+.weekWeather > div:nth-of-type(7) {
+  color: red;
 }
 @media (max-width: 960px) {
+  .sec1 {
+    display: block;
+    width: 100%;
+    margin-top: 80px;
+  }
+  .sec1 > div {
+    margin-bottom: 1rem;
+  }
+  .sec1::before,
+  .sec1::after {
+    display: none;
+  }
+  .slide1,
+  .info {
+    margin: 0;
+  }
+  .sec1 .slide1 {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .next,
+  .prev {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .next {
+    right: 1rem;
+  }
+  .prev {
+    right: auto;
+    left: 1rem;
+  }
+  .info {
+    background-color: var(--color_secBg);
+    color: white;
+  }
+  .info::after {
+    display: none;
+  }
+  .info p:nth-of-type(1),
+  .info p:nth-of-type(4) {
+    font-size: var(--font16);
+    color: var(--point_yellow);
+  }
+  .info p:nth-of-type(4),
+  .info p:nth-of-type(7) {
+    padding-top: var(--font16);
+  }
+  .info p:nth-of-type(7) {
+    font-size: var(--font16);
+    color: var(--point_yellow);
+  }
+  .info p:nth-of-type(7) span:nth-of-type(2) {
+    color: white;
+  }
+
+  .banners,
+  .tab_menu,
+  .weather {
+    width: calc(100% - var(--gap));
+    margin: auto;
+  }
+  .info {
+    border-radius: 0;
+  }
+  .ban1,
+  .ban2,
+  .ban3 {
+    padding-top: 20%;
+    margin-top: 1rem;
+  }
+  .weekWeather_con > p,
+  .todayWeather_con > p {
+    font-size: var(--font16);
+  }
+  .weatherDis {
+    font-size: 12px;
+  }
 }

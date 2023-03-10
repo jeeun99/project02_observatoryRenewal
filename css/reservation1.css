@@ -1,0 +1,80 @@
+@charset 'utf-8';
+.sec2 {
+  color: #1e1e1e;
+}
+.btn_reservation {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.btn_reservation li {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid var(--point_blue);
+  border-radius: 0 2rem 2rem 0;
+}
+.btn_reservation li:nth-of-type(1) {
+  border-right: none;
+  border-radius: 2rem 0 0 2rem;
+}
+.btn_reservation li.on {
+  background-color: var(--point_blue);
+  color: var(--point_yellow);
+}
+.sec2 h1 {
+  text-align: center;
+  font-size: var(--font24);
+  color: #1e1e1e;
+  padding-bottom: 2rem;
+}
+.caution {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  line-height: 2;
+  padding: 2rem;
+  width: 75%;
+  margin: auto;
+}
+.groupCau {
+  padding-bottom: 1rem;
+}
+.groupCau li {
+  list-style: inside;
+}
+.groupCau li:first-of-type,
+.personCau li:first-of-type {
+  list-style: none;
+  padding-bottom: 1.5rem;
+  font-size: var(--font24);
+}
+.groupCau li:nth-of-type(2),
+.personCau li:nth-of-type(2) {
+  list-style: none;
+}
+.cautionCheck {
+  padding: 3rem 0;
+  text-align: center;
+}
+.cautionCheck p {
+  color: var(--point_red);
+  padding-bottom: 0.5rem;
+}
+.cauCheckBox {
+  padding-bottom: 1rem;
+}
+.resgo {
+  background: var(--point_blue);
+  color: var(--point_yellow);
+  padding: 1rem 3rem;
+  font-size: var(--font20);
+  border-radius: 0.5rem;
+}
+@media (max-width: 960px) {
+  .sec2 {
+    display: block;
+    width: 100%;
+    margin-top: 80px;
+  }
+  .btn_reservation {
+    /* margin-top: 80px; */
+  }
+}

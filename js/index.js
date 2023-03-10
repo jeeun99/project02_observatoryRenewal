@@ -65,3 +65,73 @@ $prev.addEventListener("click", () => {
   prevMove(1);
   dotActive(sliderCount - 1);
 });
+
+const Daycontainer = document.querySelector(".todayWeather");
+const Weekcontainer = document.querySelector(".weekWeather");
+
+function loadItems() {
+  return fetch("../json/data.json")
+    .then((response) => response.json())
+    .then((json) => json.dataseries);
+}
+
+function displayItems(items) {
+  const Weekcontainer = document.querySelector(".weekWeather");
+  Weekcontainer.innerHTML = items.map((item) => createWeekHtml(item)).join("");
+  const Daycontainer = document.querySelector(".todayWeather");
+  Daycontainer.innerHTML = items.map((item) => createDayHtml(item)).join("");
+}
+
+function createWeekHtml(item) {
+  let m = item.date.toString().slice(4, 6);
+  let d = item.date.toString().slice(6);
+  return `
+  <div class="inner">
+    <img src="./img/${item.weather}.png" data-name="${item.weather}" alt="${item.weather}" />
+    <p>${m}/${d}</p>
+  </div>
+  `;
+}
+
+function createDayHtml(item) {
+  const now = new Date();
+  let year = now.getFullYear();
+  let month = ("0" + (now.getMonth() + 1)).slice(-2);
+  let day = ("0" + now.getDate()).slice(-2);
+  let dayString = year + month + day;
+  if (item.date == dayString) {
+    return `
+      <div class="weatherImg">
+        <img src="./img/${item.weather}.png" data-name="${item.weather}" alt="${item.weather}" />
+      </div>
+      <div class="weatherDis">
+        <p>강수확률: <span>0%</span></p>
+        <p>최고온도: <span>${item.temp2m.max}℃</span></p>
+        <p>최저온도: <span>${item.temp2m.min}℃</span></p>
+      </div>
+        `;
+  }
+}
+loadItems().then((items) => {
+  displayItems(items);
+});
+
+const $tabTitle = document.querySelectorAll(".tab > li");
+const $tabCon = document.querySelectorAll(".tab_con > li");
+
+function show(num) {
+  $tabTitle.forEach((a) => {
+    a.classList.remove("on");
+  });
+  $tabTitle[num].classList.add("on");
+  $tabCon.forEach((a) => {
+    a.classList.remove("on");
+  });
+  $tabCon[num].classList.add("on");
+}
+
+$tabTitle.forEach((tab, i) => {
+  tab.addEventListener("click", () => {
+    show(i);
+  });
+});

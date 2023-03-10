@@ -128,3 +128,30 @@ const FT = `
 `;
 $hd.innerHTML = HD;
 $ft.innerHTML = FT;
+
+const $ham = document.querySelector(".ham");
+const $gnb = document.querySelector(".gnb");
+
+$ham.addEventListener("click", () => {
+  $ham.classList.toggle("on");
+  $gnb.classList.toggle("on");
+});
+
+const $gnbList = document.querySelectorAll(".gnb > li > a");
+const $sub = document.querySelector(".gnb > li > a + .sub");
+
+$gnbList.forEach((a) => {
+  a.addEventListener("click", (e) => {
+    e.preventDefault();
+    let eTarget = e.target;
+
+    if (eTarget.classList.contains("on") == false) {
+      $gnbList.forEach((a) => {
+        a.classList.remove("on");
+      });
+      eTarget.classList.add("on");
+    } else {
+      eTarget.classList.remove("on");
+    }
+  });
+});
