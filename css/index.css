@@ -1,0 +1,265 @@
+@charset 'utf-8';
+
+/* section 1 */
+.sec1 {
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 290px);
+  gap: var(--gap);
+}
+
+.btn {
+  position: absolute;
+  top: var(--gap);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.prev {
+  right: 6rem;
+}
+.prev::before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--point_yellow);
+}
+.next {
+  right: 3rem;
+}
+.next::before {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--point_yellow);
+}
+.slide1 {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.slider-img {
+  display: flex;
+  width: 300%;
+  height: 290px;
+}
+.slider {
+  width: calc(100% / 3);
+  overflow: hidden;
+  position: relative;
+}
+.slider:nth-of-type(3) ~ li {
+  display: none;
+}
+.slider > p {
+  position: absolute;
+  color: var(--color_white);
+  font-size: var(--font24);
+  top: var(--gap);
+  left: 3rem;
+}
+.slider-dot {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50px);
+}
+.slider-dot .dot {
+  position: absolute;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  color: transparent;
+  background-color: lightgrey;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 2px;
+}
+.slider-dot .dot:hover {
+  background-color: var(--point_yellow);
+}
+.slider-dot .dot:first-of-type {
+  background-color: var(--point_yellow);
+}
+.slider-dot .dot1 {
+  left: 0;
+}
+.slider-dot .dot2 {
+  left: 20px;
+}
+.slider-dot .dot3 {
+  left: 40px;
+}
+.slider-dot .dot4 {
+  left: 60px;
+}
+.info {
+  background-color: #f2f2f3;
+  padding: 24px 48px;
+  color: black;
+  line-height: 1.5;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.info::after {
+  content: "";
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  bottom: -24px;
+  right: 0;
+  background: url(../img/telescope.png) no-repeat;
+  position: absolute;
+  z-index: 10;
+}
+.info p:nth-of-type(1),
+.info p:nth-of-type(4) {
+  padding-bottom: 0.5rem;
+  font-size: var(--font20);
+  color: var(--point_blue);
+  font-weight: bold;
+}
+.info p:nth-of-type(4),
+.info p:nth-of-type(7) {
+  padding-top: 25px;
+}
+.info p:nth-of-type(7) {
+  font-size: var(--font20);
+  color: var(--point_blue);
+  font-weight: bold;
+}
+.info p:nth-of-type(7) span:nth-of-type(2) {
+  font-size: var(--font16);
+  color: black;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.banners {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.ban1,
+.ban2,
+.ban3 {
+  height: calc(100% / 3 - 0.5rem);
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.ban1:hover img,
+.ban2:hover img,
+.ban3:hover img {
+  transform: scale(1.2);
+}
+.ban1 > img,
+.ban2 > img,
+.ban3 > img {
+  transition: 0.3s;
+}
+.ban1 > p,
+.ban2 > p,
+.ban3 > p {
+  position: absolute;
+  color: var(--color_white);
+  font-size: var(--font20);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ban1 > p {
+  right: 2rem;
+}
+.ban2 > p {
+  left: 2rem;
+}
+.ban3 > p {
+  right: 2rem;
+}
+.tab_menu {
+  border: 1px solid #333;
+  grid-column: span 2;
+  border-radius: 5px;
+}
+.tab {
+  display: flex;
+  width: 100%;
+  color: var(--color_white);
+  background-color: var(--point_blue);
+  position: relative;
+}
+.tab > li {
+  padding: 0.75rem;
+  cursor: pointer;
+}
+.tab > li.on {
+  background-color: var(--color_white);
+  color: var(--point_blue);
+}
+.tab_more {
+  position: absolute;
+  right: 10px;
+  font-size: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.notice {
+  display: none;
+  padding: 0 1rem;
+}
+.notice.on {
+  display: block;
+}
+.notice > div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  padding-top: 1.2rem;
+  line-height: 1.5;
+  width: 100%;
+}
+.notice > div > p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 70%;
+}
+.notice > div > span {
+  padding-right: 1rem;
+}
+.qna {
+  display: none;
+  padding: 0 1rem;
+}
+.qna.on {
+  display: block;
+}
+.qna > div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  padding-top: 1.2rem;
+  line-height: 1.5;
+  width: 100%;
+}
+.qna > div > p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 70%;
+}
+.qna > div > span {
+  padding-right: 1rem;
+}
+.weather {
+  border: 1px solid blueviolet;
+}
+@media (max-width: 960px) {
+}

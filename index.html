@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/my_reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/common.js" defer></script>
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <header class="hd">
+      <!-- header -->
+    </header>
+    <section class="sec1 mw">
+      <div class="slide1">
+        <div class="slide-wrap">
+          <ul class="slider-img">
+            <li class="slider" data-name="banner1">
+              <p>전시해설프로그램</p>
+              <img src="./img/banner1.png" alt="banner1" />
+            </li>
+            <li class="slider" data-name="banner2">
+              <p>토요별음악회</p>
+              <img src="./img/banner2.png" alt="banner2" />
+            </li>
+            <li class="slider" data-name="banner3">
+              <p>천체관측회</p>
+              <img src="./img/banner3.png" alt="banner3" />
+            </li>
+            <li class="slider" data-name="banner4">
+              <p>별빛속에 시와 음악회</p>
+              <img src="./img/banner4.png" alt="banner4" />
+            </li>
+          </ul>
+        </div>
+        <button class="btn prev"></button>
+        <button class="btn next"></button>
+        <div class="slider-dot"></div>
+      </div>
+      <div class="info">
+        <p>관람시간</p>
+        <p>OPEN 14:00 / CLOSE 22:00</p>
+        <p>입장마감 21:50</p>
+        <p>휴관일</p>
+        <p>매주 월요일 / 공휴일 다음날</p>
+        <p>명절 및 신정 연휴</p>
+        <p><span>이용요금</span> <span>무료</span></p>
+      </div>
+      <div class="banners">
+        <div class="ban1">
+          <img src="./img/sec_banner1.png" alt="예약바로가기" />
+          <p>예약바로가기</p>
+        </div>
+        <div class="ban2">
+          <img src="./img/sec_banner2.png" alt="특별프로그램" />
+          <p>특별프로그램</p>
+        </div>
+        <div class="ban3">
+          <img src="./img/sec_banner3.png" alt="천문정보" />
+          <p>천문정보</p>
+        </div>
+      </div>
+      <div class="tab_menu">
+        <ul class="tab">
+          <li class="">공지사항</li>
+          <li class="on">질문과답변</li>
+          <a class="tab_more">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+        </ul>
+        <ul class="tab_con">
+          <li class="notice">
+            <div>
+              <p>
+                공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목공지사항제목
+              </p>
+              <span>2023-03-09</span>
+            </div>
+            <div>
+              <p>공지사항제목</p>
+              <span>2023-03-09</span>
+            </div>
+            <div>
+              <p>공지사항제목</p>
+              <span>2023-03-09</span>
+            </div>
+            <div>
+              <p>공지사항제목</p>
+              <span>2023-03-09</span>
+            </div>
+            <div>
+              <p>공지사항제목</p>
+              <span>2023-03-09</span>
+            </div>
+          </li>
+          <li class="qna on">
+            <div>
+              <p>질문</p>
+              <span>2023-03-09</span>
+            </div>
+            <div>
+              <p>질문</p>
+              <span>2023-03-09</span>
+            </div>
+            <div>
+              <p>질문</p>
+              <span>2023-03-09</span>
+            </div>
+            <div>
+              <p>질문</p>
+              <span>2023-03-09</span>
+            </div>
+            <div>
+              <p>질문</p>
+              <span>2023-03-09</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="weather">
+        <!-- 오늘날씨, 이번주날씨 -->
+      </div>
+    </section>
+    <footer class="ft">
+      <!-- footer -->
+      <div class="mw">
+        <div class="ftlogo">
+          <img src="./img/logo.svg" alt="logo" />
+        </div>
+        <div class="ftwrite">
+          <span>(34128) 대전광역시 유성구 과학로 213-48 (신성동 7-13)</span>
+          <span>TEL. 042-863-8762, 8763</span>
+          <span>FAX. 042-863-8761</span>
+          <p>Copyright © 2017 Daejeon Observatory. All rights reserved</p>
+        </div>
+        <div class="goto">
+          <p>바로가기</p>
+          <div class="insite">
+            <select name="site" id="site-select">
+              <option value="기관사이트바로가기" selected="selected">
+                기관사이트 바로가기
+              </option>
+              <option class="opts" value="대전광역시">대전광역시</option>
+              <option class="opts" value="한국천문연구원">
+                한국천문연구원
+              </option>
+              <option class="opts" value="국립중앙과학관">
+                국립중앙과학관
+              </option>
+              <option class="opts" value="(사)한국천문우주과학관협회">
+                (사)한국천문우주과학관협회
+              </option>
+              <option class="opts" value="대덕연구개발특구">
+                대덕연구개발특구
+              </option>
+            </select>
+          </div>
+          <div class="observatory">
+            <select name="observatory" id="obs-select">
+              <option value="천문대바로가기" selected="selected">
+                천문대 바로가기
+              </option>
+              <option class="opts" value="별마로천문대">별마로천문대</option>
+              <option class="opts" value="김해곡성섬진강천문대">
+                김해곡성섬진강천문대
+              </option>
+              <option class="opts" value="곡성섬진강천문대">
+                곡성섬진강천문대
+              </option>
+              <option class="opts" value="국토정중앙천문대">
+                국토정중앙천문대
+              </option>
+              <option class="opts" value="충주고구려천문과학관">
+                충주고구려천문과학관
+              </option>
+              <option class="opts" value="소백산천문대">소백산천문대</option>
+
+              <option class="opts" value="보현산천문대">보현산천문대</option>
+              <option class="opts" value="칠갑산천문대">칠갑산천문대</option>
+              <option class="opts" value="서귀포천문과학문화관">
+                서귀포천문과학문화관
+              </option>
+              <option class="opts" value="예천천문우주센터">
+                예천천문우주센터
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
