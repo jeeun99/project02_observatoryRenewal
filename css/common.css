@@ -146,6 +146,27 @@ button {
 .insite {
   padding-bottom: 0.5rem;
 }
+
+.btn_reservation {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.btn_reservation li {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid var(--point_blue);
+  border-radius: 0 2rem 2rem 0;
+}
+.btn_reservation li:nth-of-type(1) {
+  border-right: none;
+  border-radius: 2rem 0 0 2rem;
+}
+.btn_reservation li.on {
+  background-color: var(--point_blue);
+  color: var(--point_yellow);
+}
+
 @media (max-width: 1070px) {
   .gnb {
     font-size: var(--font20);
@@ -198,7 +219,7 @@ button {
   }
   .gnb.on {
     position: absolute;
-    width: 50%;
+    width: 60%;
     height: 100vh;
     top: 80px;
     right: 0;
@@ -276,5 +297,10 @@ button {
   }
   .goto p {
     display: none;
+  }
+}
+@media (max-width: 440px) {
+  .btn_reservation {
+    font-size: 0.75rem;
   }
 }

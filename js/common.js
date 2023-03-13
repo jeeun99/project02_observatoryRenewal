@@ -3,7 +3,9 @@ const $ft = document.querySelector(".ft");
 
 const HD = `
 <div class="mw">
-<h1><img src="./img/logo.svg" alt="logo" /></h1>
+<h1>
+  <a href="./index.html"><img src="./img/logo.svg" alt="logo" /></a>
+</h1>
 <nav class="gnb_con">
   <ul class="gnb">
     <li>
@@ -26,7 +28,7 @@ const HD = `
     <li>
       <a href="#none">예약안내</a>
       <ul class="sub">
-        <li><a href="#none">관람예약</a></li>
+        <li><a href="./reservation1.html">관람예약</a></li>
         <li><a href="#none">특별프로그램</a></li>
         <li><a href="#none">봉사활동</a></li>
       </ul>

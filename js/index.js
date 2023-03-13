@@ -54,8 +54,8 @@ $next.addEventListener("click", () => {
 });
 function prevMove(i) {
   for (let a = 0; a < i; a++) {
-    $sliderImg.prepend($sliderImg.firstElementChild);
-    $sliderImg.style.cssText = `margin-left: ${sliderWidth}px;`;
+    $sliderImg.prepend($sliderImg.lastElementChild);
+    $sliderImg.style.cssText = `margin-left: -${sliderWidth}px;`;
     setTimeout(() => {
       $sliderImg.style.cssText = `margin-left:0px; transition: 0.5s;`;
     });
@@ -70,7 +70,9 @@ const Daycontainer = document.querySelector(".todayWeather");
 const Weekcontainer = document.querySelector(".weekWeather");
 
 function loadItems() {
-  return fetch("../json/data.json")
+  return fetch(
+    "https://www.7timer.info/bin/api.pl?lon=127.378&lat=36.349&product=civillight&output=json"
+  )
     .then((response) => response.json())
     .then((json) => json.dataseries);
 }
@@ -99,13 +101,23 @@ function createDayHtml(item) {
   let month = ("0" + (now.getMonth() + 1)).slice(-2);
   let day = ("0" + now.getDate()).slice(-2);
   let dayString = year + month + day;
+  let rainny = "";
+  if (item.weather == "lightrain" || item.weather == "rain") {
+    rainny = "100%";
+  } else if (item.weather == "cloudy") {
+    rainny = "50% ~ 70%";
+  } else if (item.weather == "mcloudy" || item.weather == "pcloudy") {
+    rainny = "10% ~ 40%";
+  } else if (item.weather == "clear") {
+    rainny = "0%";
+  }
   if (item.date == dayString) {
     return `
       <div class="weatherImg">
         <img src="./img/${item.weather}.png" data-name="${item.weather}" alt="${item.weather}" />
       </div>
       <div class="weatherDis">
-        <p>강수확률: <span>0%</span></p>
+        <p>강수확률: <span>${rainny}</span></p>
         <p>최고온도: <span>${item.temp2m.max}℃</span></p>
         <p>최저온도: <span>${item.temp2m.min}℃</span></p>
       </div>

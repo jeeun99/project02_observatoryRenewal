@@ -1,0 +1,47 @@
+.sec_wrap {
+  text-align: center;
+}
+.resSuccess {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--txt_color);
+}
+.resSuccess h1 {
+  font-size: var(--font24);
+  padding-bottom: 3rem;
+}
+.resSuccess p {
+  font-size: var(--font20);
+}
+.resDesc {
+  font-size: var(--font16);
+  padding-bottom: 3rem;
+}
+.resDesc p {
+  padding-bottom: 0.75rem;
+}
+.btn_home {
+  padding-bottom: 3rem;
+}
+.gotoHome {
+  background: var(--point_blue);
+  color: var(--point_yellow);
+  padding: 1rem 3rem;
+  font-size: var(--font20);
+  border-radius: 0.5rem;
+}
+.gotoHome:hover {
+  background-color: var(--point_yellow);
+  color: var(--point_blue);
+}
+@media (max-width: 960px) {
+  section {
+    margin-top: 80px;
+  }
+  .resSuccess h1 {
+    font-size: var(--font20);
+  }
+  .resSuccess p {
+    font-size: var(--font16);
+  }
+}

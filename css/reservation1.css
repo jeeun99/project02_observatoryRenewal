@@ -2,25 +2,6 @@
 .sec2 {
   color: #1e1e1e;
 }
-.btn_reservation {
-  display: flex;
-  justify-content: center;
-  padding: 4rem 0;
-}
-.btn_reservation li {
-  cursor: pointer;
-  padding: 1rem 2rem;
-  border: 1px solid var(--point_blue);
-  border-radius: 0 2rem 2rem 0;
-}
-.btn_reservation li:nth-of-type(1) {
-  border-right: none;
-  border-radius: 2rem 0 0 2rem;
-}
-.btn_reservation li.on {
-  background-color: var(--point_blue);
-  color: var(--point_yellow);
-}
 .sec2 h1 {
   text-align: center;
   font-size: var(--font24);
@@ -59,7 +40,7 @@
   padding-bottom: 0.5rem;
 }
 .cauCheckBox {
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 .resgo {
   background: var(--point_blue);
@@ -68,13 +49,14 @@
   font-size: var(--font20);
   border-radius: 0.5rem;
 }
+.resgo:hover {
+  background-color: var(--point_yellow);
+  color: var(--point_blue);
+}
 @media (max-width: 960px) {
   .sec2 {
     display: block;
     width: 100%;
     margin-top: 80px;
-  }
-  .btn_reservation {
-    /* margin-top: 80px; */
   }
 }
