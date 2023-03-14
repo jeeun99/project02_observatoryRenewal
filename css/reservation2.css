@@ -1,0 +1,47 @@
+/*  */
+.sec3 h1 {
+  text-align: center;
+  font-size: var(--font24);
+  color: #1e1e1e;
+  padding-bottom: 2rem;
+}
+.process {
+  background-color: var(--color_secBg);
+  border-radius: 5px;
+  display: flex;
+  color: var(--color_white);
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.process i {
+  padding-bottom: 0.5rem;
+  font-size: 3rem;
+}
+.daychoice,
+.list,
+.writePer {
+  text-align: center;
+  padding: 1rem;
+}
+.daychoice > i,
+.list > i {
+  color: var(--point_yellow);
+}
+.nxt > i {
+  font-size: 1.5rem;
+}
+.cal_sec {
+}
+.cal_sec p {
+  padding: 2rem 0 1rem;
+  font-size: var(--font20);
+}
+
+@media (max-width: 960px) {
+  .sec3 {
+    display: block;
+    width: 100%;
+    margin-top: 80px;
+  }
+}

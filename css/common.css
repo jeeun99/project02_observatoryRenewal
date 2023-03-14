@@ -32,6 +32,9 @@ button {
   outline: none;
   cursor: pointer;
 }
+.wrap {
+  overflow: hidden;
+}
 .mw {
   width: calc(100% - var(--gap));
   max-width: 1440px;
