@@ -15,10 +15,10 @@
     />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/calendar.css" />
-    <link rel="stylesheet" href="./css/reservation2.css" />
+    <link rel="stylesheet" href="./css/reservation3.css" />
     <script src="./js/common.js" defer></script>
     <script src="./js/calendar.js" defer></script>
-    <script src="./js/reservation2.js" defer></script>
+    <script src="./js/reservation3.js" defer></script>
   </head>
   <body>
     <header class="hd">
@@ -29,32 +29,189 @@
         <li class="on">프로그램 예약하기</li>
         <li class="">예약 확인 및 취소</li>
       </ul>
-      <ul>
+      <ul class="mw">
         <li class="res">
-          <h1>관람 예약시 주의사항</h1>
-          <div class="process">
-            <div class="daychoice">
-              <i class="fa-regular fa-calendar-check"></i>
-              <p>관람예약</p>
+          <h1>프로그램 예약하기</h1>
+          <!--  -->
+          <div class="inf">
+            <div class="inf1">
+              <div class="process">
+                <div class="daychoice">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <p>관람예약</p>
+                </div>
+                <div class="nxt">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="program_c">
+                  <i class="fa-solid fa-list"></i>
+                  <p>프로그램 선택</p>
+                </div>
+                <div class="nxt">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="writePer">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <p>정보 입력</p>
+                </div>
+              </div>
+              <div class="cal_sec">
+                <p>관람일 선택</p>
+                <div class="calendar"></div>
+              </div>
             </div>
-            <div class="nxt">
-              <i class="fa-solid fa-arrow-right"></i>
+            <div class="inf2">
+              <div class="personal_con">
+                <p>예약자 정보</p>
+                <div class="per_info">
+                  <div>
+                    <label for=""> 예약자명</label>
+                    <input type="text" name="nm" id="nm" />
+                  </div>
+                  <div>
+                    <label for=""> 연락처</label>
+                    <input type="text" name="numb" id="numb" />
+                  </div>
+
+                  <div>
+                    <label for="email"> 이메일</label>
+                    <input type="email" name="email" id="email1" />
+                    &#64;
+                    <input type="email" name="email" id="email2" />
+                  </div>
+
+                  <div>
+                    <label for=""> 비밀번호</label>
+                    <input
+                      type="password"
+                      name="pw"
+                      id="pw"
+                      placeholder="비밀번호는 예약 확인시 필요합니다."
+                      size="30"
+                    />
+                  </div>
+                </div>
+                <p>선택일시: 2023년 3월 8일 (수) 21:00</p>
+                <div class="per_ntc">
+                  <p>* 이메일</p>
+                  <p>
+                    - 예약 내역이 발송됩니다. 실제로 사용하는 이메일을
+                    입력해주세요.
+                  </p>
+                  <p>* 예약확인</p>
+                  <p>
+                    - 이메일과 예약시 설정하신 비밀번호를 이용하여
+                    확인가능합니다. 본인만 아는 정보를 입력해주세요.
+                  </p>
+                </div>
+              </div>
+              <div class="team_con">
+                <p>단체 정보</p>
+                <div class="team_info">
+                  <div>
+                    <label for="team_name">단체명</label>
+                    <input type="text" id="team_name" />
+                  </div>
+                  <div>
+                    <label for="region">지역명</label>
+                    <select name="region" id="region">
+                      <option value="">지역 선택</option>
+                      <option value="daejeon">대전</option>
+                      <option value="sejong">세종</option>
+                      <option value="">서울</option>
+                      <option value="">경기</option>
+                      <option value="">강원</option>
+                      <option value="">경남</option>
+                      <option value="">경북</option>
+                      <option value="">전남</option>
+                      <option value="">전북</option>
+                      <option value="">충남</option>
+                      <option value="">충북</option>
+                      <option value="">대구</option>
+                      <option value="">울산</option>
+                      <option value="">광주</option>
+                      <option value="">인천</option>
+                      <option value="">제주</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="team_num">관람인원</label>
+                    <input
+                      type="text"
+                      id="team_num"
+                      placeholder="인원수 입력"
+                    />
+                  </div>
+                  <div>
+                    <label for="team_age">관람연령</label>
+                    <input
+                      type="text"
+                      id="team_age"
+                      placeholder="관람인원의 평균연령 입력"
+                      maxlength="30"
+                    />
+                  </div>
+                  <div>
+                    <label for="leader">인솔자</label>
+                    <select name="leader" id="leader">
+                      <option value="">인솔자 유/무 선택</option>
+                      <option value="yes">인솔자 있음</option>
+                      <option value="no">인솔자 없음</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="team_memo">
+                  <p>기타사항</p>
+                  <textarea
+                    name="etc"
+                    rows="4"
+                    cols="70"
+                    placeholder="기타사항이 있을 경우 적어주세요."
+                  ></textarea>
+                </div>
+              </div>
             </div>
-            <div class="list">
-              <i class="fa-solid fa-list"></i>
-              <p>프로그램 선택</p>
+            <div class="infoAgree">
+              <div>
+                <p>정보의 수집·이용 목적</p>
+                <p>
+                  '대전시민천문대'이(가) 수집하는 사용자의 개인정보 교육/관람
+                  예약 서비스를 위한 목적으로 수집하며 이 외의 목적으로 일절
+                  사용하지 않습니다.
+                </p>
+                <p>개인정보의 수집범위</p>
+                <p>
+                  '대전시민천문대'이(가) 교육/관람 예약 서비스를 위한 목적으로
+                  수집하는 개인정보는 다음과 같습니다. 필수항목 : 이름,
+                  비밀번호, 이메일주소, 연락처
+                </p>
+                <p>개인정보 보유기간</p>
+                <p>개인정보는 정보 확인 후 1년 이내 파기됩니다.</p>
+              </div>
+              <div class="cautionCheck">
+                <p>
+                  * 위 내용에 동의하지 않을 시 서비스 이용이 제한될 수 있습니다.
+                </p>
+                <label for="info_check">
+                  <input type="checkbox" name="cautionCheck" id="info_check" />
+                  <span>위 내용에 동의하여 개인정보를 제공합니다.</span>
+                </label>
+              </div>
             </div>
-            <div class="nxt">
-              <i class="fa-solid fa-arrow-right"></i>
+            <div class="btn_process">
+              <button
+                class="btn_before"
+                onclick="location.href = './reservation2.html'"
+              >
+                이전으로 돌아가기
+              </button>
+              <button
+                class="btn_resComplete"
+                onclick="location.href = './resComplete.html'"
+              >
+                예약 신청
+              </button>
             </div>
-            <div class="writePer">
-              <i class="fa-solid fa-pen-to-square"></i>
-              <p>정보 입력</p>
-            </div>
-          </div>
-          <div class="cal_sec">
-            <p>관람일 선택</p>
-            <div class="calendar"></div>
           </div>
         </li>
         <li class="cancel">

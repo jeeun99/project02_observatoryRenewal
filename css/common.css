@@ -6,7 +6,7 @@
   --color_white: #fff;
   --color_disBg: #fffffe;
   --point_yellow: #ffe600;
-  --color_btnBack: #00002140;
+  --color_btnBack: rgb(0, 0, 33, 0.4);
   --color_secBg: rgba(0, 1, 33, 0.8);
   --txt_color: #333;
   --font24: 24px;

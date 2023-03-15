@@ -106,11 +106,18 @@
             <div class="cautionCheck">
               <p>* 주의사항 미확인으로 인한 불이익에 대해 책임지지 않습니다.</p>
               <div class="cauCheckBox">
-                <input type="checkbox" name="cautionCheck" id="cau_check" />
-                <span>주의사항을 확인했습니다.</span>
+                <label for="cau_check">
+                  <input type="checkbox" name="cautionCheck" id="cau_check" />
+                  <span>주의사항을 확인했습니다.</span>
+                </label>
               </div>
               <div>
-                <button class="resgo">예약 진행하기</button>
+                <button
+                  class="resgo"
+                  onclick="location.href = './reservation2.html'"
+                >
+                  예약 진행하기
+                </button>
               </div>
             </div>
           </li>

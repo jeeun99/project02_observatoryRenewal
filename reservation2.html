@@ -21,49 +21,229 @@
     <script src="./js/reservation2.js" defer></script>
   </head>
   <body>
-    <header class="hd">
-      <!-- header -->
-    </header>
-    <section class="sec3 mw">
-      <ul class="btn_reservation">
-        <li class="on">프로그램 예약하기</li>
-        <li class="">예약 확인 및 취소</li>
-      </ul>
-      <ul>
-        <li class="res">
-          <h1>관람 예약시 주의사항</h1>
-          <div class="process">
-            <div class="daychoice">
-              <i class="fa-regular fa-calendar-check"></i>
-              <p>관람예약</p>
+    <div class="wrap">
+      <header class="hd">
+        <!-- header -->
+      </header>
+      <section class="sec3 mw">
+        <ul class="btn_reservation">
+          <li class="on">프로그램 예약하기</li>
+          <li class="">예약 확인 및 취소</li>
+        </ul>
+        <ul class="mw">
+          <li class="res">
+            <h1>프로그램 예약하기</h1>
+            <!--  -->
+            <div class="inf">
+              <div class="inf1">
+                <div class="process">
+                  <div class="daychoice">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <p>관람예약</p>
+                  </div>
+                  <div class="nxt">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <div class="program_c">
+                    <i class="fa-solid fa-list"></i>
+                    <p>프로그램 선택</p>
+                  </div>
+                  <div class="nxt">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <div class="writePer">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <p>정보 입력</p>
+                  </div>
+                </div>
+                <div class="cal_sec">
+                  <p>관람일 선택</p>
+                  <div class="calendar"></div>
+                </div>
+              </div>
+              <div class="inf2">
+                <h2>프로그램 시간 선택</h2>
+                <div>
+                  <div class="choosetype">
+                    <div>
+                      <input type="radio" id="btn1" name="perOrteam" checked />
+                      <label for="btn1">개인예약</label>
+                      <input type="radio" id="btn2" name="perOrteam" />
+                      <label for="btn2">단체예약</label>
+                    </div>
+                    <p>2023년 3월 15일 (수)</p>
+                  </div>
+                  <div class="item on person">
+                    <p class="title">
+                      <span class="t1">선택</span>
+                      <span class="t2">구분</span>
+                      <span class="t3">시간</span>
+                      <span class="t4">예약상태</span>
+                    </p>
+                    <ul>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">1</span>
+                          <span class="t_t2">15:10</span>
+                          <div class="t_t3">
+                            <span class="pos">예약가능</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">2</span>
+                          <span class="t_t2">14:10</span>
+                          <div class="t_t3">
+                            <span class="impos">예약불가</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">3</span>
+                          <span class="t_t2">17:10</span>
+                          <div class="t_t3">
+                            <span class="impos">예약불가</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">4</span>
+                          <span class="t_t2">19:10</span>
+                          <div class="t_t3">
+                            <span class="pos">예약가능</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">5</span>
+                          <span class="t_t2">20:10</span>
+                          <div class="t_t3">
+                            <span class="pos">예약가능</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">6</span>
+                          <span class="t_t2">21:10</span>
+                          <div class="t_t3">
+                            <span class="pos">예약가능</span>
+                          </div>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="item team">
+                    <p class="title">
+                      <span class="t1">선택</span>
+                      <span class="t2">구분</span>
+                      <span class="t3">시간</span>
+                      <span class="t4">예약상태</span>
+                    </p>
+                    <ul>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">1</span>
+                          <span class="t_t2">15:00</span>
+                          <div class="t_t3">
+                            <span class="pos">예약가능</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">2</span>
+                          <span class="t_t2">14:00</span>
+                          <div class="t_t3">
+                            <span class="impos">예약불가</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">3</span>
+                          <span class="t_t2">17:00</span>
+                          <div class="t_t3">
+                            <span class="impos">예약불가</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">4</span>
+                          <span class="t_t2">19:00</span>
+                          <div class="t_t3">
+                            <span class="pos">예약가능</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">5</span>
+                          <span class="t_t2">20:00</span>
+                          <div class="t_t3">
+                            <span class="pos">예약가능</span>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="list">
+                        <label>
+                          <input type="radio" name="res_checked" />
+                          <span class="t_t1">6</span>
+                          <span class="t_t2">21:00</span>
+                          <div class="t_t3">
+                            <span class="pos">예약가능</span>
+                          </div>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="btn_process">
+                <input
+                  type="button"
+                  value="이전으로 돌아가기"
+                  onclick="location.href = './reservation1.html'"
+                />
+                <input
+                  type="submit"
+                  value="정보 입력하기"
+                  class="per_btn on"
+                  onclick="location.href = './reservation3_per.html'"
+                />
+                <input
+                  type="submit"
+                  value="정보 입력하기"
+                  class="team_btn"
+                  onclick="location.href = './reservation3_group.html'"
+                />
+              </div>
             </div>
-            <div class="nxt">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div class="list">
-              <i class="fa-solid fa-list"></i>
-              <p>프로그램 선택</p>
-            </div>
-            <div class="nxt">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div class="writePer">
-              <i class="fa-solid fa-pen-to-square"></i>
-              <p>정보 입력</p>
-            </div>
-          </div>
-          <div class="cal_sec">
-            <p>관람일 선택</p>
-            <div class="calendar"></div>
-          </div>
-        </li>
-        <li class="cancel">
-          <!-- 취소 -->
-        </li>
-      </ul>
-    </section>
-    <footer class="ft">
-      <!-- footer -->
-    </footer>
+          </li>
+          <li class="cancel">
+            <!-- 취소 -->
+          </li>
+        </ul>
+      </section>
+      <footer class="ft">
+        <!-- footer -->
+      </footer>
+    </div>
   </body>
 </html>
