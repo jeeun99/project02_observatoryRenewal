@@ -24,6 +24,7 @@
   background: center / contain url(../img/mainimg1.png) no-repeat;
   position: absolute;
   z-index: 10;
+  /* animation: ani1 10s infinite; */
 }
 .sec1::after {
   content: "";
@@ -35,6 +36,7 @@
   background: center / contain url(../img/mainimg2.png) no-repeat;
   position: absolute;
   z-index: 10;
+  animation: ani2 10s infinite;
 }
 .btn {
   position: absolute;
@@ -467,5 +469,27 @@
   }
   .weatherDis {
     font-size: 14px;
+  }
+}
+@keyframes ani1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px) rotate(-15deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes ani2 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-50px) rotate(-15deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
   }
 }

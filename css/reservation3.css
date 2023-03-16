@@ -184,6 +184,57 @@
 .btn_before {
   margin-right: 1rem;
 }
+input[type="submit"] {
+  cursor: pointer;
+}
+#checkplz {
+  display: block;
+  padding-top: 0.5rem;
+  color: var(--point_red);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal.on {
+  display: block;
+}
+.modal_con {
+  width: 500px;
+  height: 300px;
+  padding: 1rem;
+  background-color: var(--point_blue);
+  color: var(--color_white);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal_con > p,
+.modal_con button {
+  text-align: center;
+}
+.modal_con > div > div {
+  display: flex;
+  padding: 0.5rem 0;
+}
+.modal_con > div > div > p {
+  padding-right: 1rem;
+}
+.modal_con button {
+  color: var(--point_blue);
+  background-color: var(--point_yellow);
+  padding: 0.5rem 2rem;
+}
 
 @media (max-width: 960px) {
   .sec3 {

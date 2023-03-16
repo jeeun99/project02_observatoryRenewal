@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/calendar.css" />
     <link rel="stylesheet" href="./css/reservation3.css" />
-    <script src="./js/common.js" defer></script>
     <script src="./js/calendar.js" defer></script>
+    <script src="./js/common.js" defer></script>
     <script src="./js/reservation3.js" defer></script>
   </head>
   <body>
@@ -131,21 +131,14 @@
                   <input type="checkbox" name="cautionCheck" id="info_check" />
                   <span>위 내용에 동의하여 개인정보를 제공합니다.</span>
                 </label>
+                <span id="checkplz"></span>
               </div>
             </div>
             <div class="btn_process">
-              <button
-                class="btn_before"
-                onclick="location.href = './reservation2.html'"
-              >
+              <button class="btn_before" onclick="back()">
                 이전으로 돌아가기
               </button>
-              <button
-                class="btn_resComplete"
-                onclick="location.href = './resComplete.html'"
-              >
-                예약 신청
-              </button>
+              <input type="submit" value="예약 신청" class="btn_resComplete" />
             </div>
           </div>
         </li>
@@ -153,6 +146,26 @@
           <!-- 취소 -->
         </li>
       </ul>
+      <div class="modal">
+        <div class="modal_con">
+          <p>예약 확인 안내</p>
+          <div>
+            <div>
+              <p>예약자명</p>
+              <p>홍길동</p>
+            </div>
+            <div>
+              <p>전화번호</p>
+              <p>010-1234-5678</p>
+            </div>
+            <div>
+              <p>예약일자</p>
+              <p>2023년 3월 20일</p>
+            </div>
+          </div>
+          <button>예약완료</button>
+        </div>
+      </div>
     </section>
     <footer class="ft">
       <!-- footer -->

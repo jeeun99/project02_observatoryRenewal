@@ -1,6 +1,7 @@
 const $hd = document.querySelector(".hd");
 const $ft = document.querySelector(".ft");
 
+// header, footer js로 연결
 const HD = `
 <div class="mw">
 <h1>
@@ -131,6 +132,7 @@ const FT = `
 $hd.innerHTML = HD;
 $ft.innerHTML = FT;
 
+// 모바일에서 햄버거 버튼을 통한 메뉴 등장
 const $ham = document.querySelector(".ham");
 const $gnb = document.querySelector(".gnb");
 
@@ -139,8 +141,9 @@ $ham.addEventListener("click", () => {
   $gnb.classList.toggle("on");
 });
 
+// a에 on class 부착을 통한 sub 활성화 (css처리)
 const $gnbList = document.querySelectorAll(".gnb > li > a");
-const $sub = document.querySelector(".gnb > li > a + .sub");
+// const $sub = document.querySelector(".gnb > li > a + .sub");
 
 $gnbList.forEach((a) => {
   a.addEventListener("click", (e) => {
@@ -152,6 +155,25 @@ $gnbList.forEach((a) => {
         a.classList.remove("on");
       });
       eTarget.classList.add("on");
+    } else {
+      eTarget.classList.remove("on");
+    }
+  });
+});
+
+// 달력의 날짜 클릭시 해당일 색상 변경되고, 다시 한 번 더 클릭시 원래대로 변경
+// 일자 선택 후 다른 일 클릭시에도 이전 일자의 색상은 원래대로 변경
+const $chooseItem = document.querySelectorAll(".number-item");
+
+$chooseItem.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    const eTarget = e.target.parentNode;
+    if (eTarget.classList.contains("on") == false) {
+      $chooseItem.forEach((a) => {
+        a.classList.remove("on");
+      });
+      eTarget.classList.toggle("on");
     } else {
       eTarget.classList.remove("on");
     }

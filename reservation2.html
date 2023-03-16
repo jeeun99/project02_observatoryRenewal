@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/calendar.css" />
     <link rel="stylesheet" href="./css/reservation2.css" />
-    <script src="./js/common.js" defer></script>
     <script src="./js/calendar.js" defer></script>
+    <script src="./js/common.js" defer></script>
     <script src="./js/reservation2.js" defer></script>
   </head>
   <body>
@@ -71,7 +71,6 @@
                       <input type="radio" id="btn2" name="perOrteam" />
                       <label for="btn2">단체예약</label>
                     </div>
-                    <p>2023년 3월 15일 (수)</p>
                   </div>
                   <div class="item on person">
                     <p class="title">
@@ -219,7 +218,7 @@
                 <input
                   type="button"
                   value="이전으로 돌아가기"
-                  onclick="location.href = './reservation1.html'"
+                  onclick="back()"
                 />
                 <input
                   type="submit"

@@ -152,6 +152,7 @@ input[type="submit" i] {
   padding: 1rem 3rem;
   font-size: var(--font20);
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 input[type="button" i] {
   background: var(--color_btnBack);
