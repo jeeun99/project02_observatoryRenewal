@@ -67,17 +67,31 @@
                   <div>
                     <label for=""> 예약자명</label>
                     <input type="text" name="nm" id="nm" />
+                    <span id="username-error"></span>
                   </div>
                   <div>
                     <label for=""> 연락처</label>
-                    <input type="text" name="numb" id="numb" />
+                    <input
+                      type="text"
+                      name="numb"
+                      id="numb"
+                      placeholder="'-' 포함하여 입력해주세요."
+                    />
+                    <span id="numb-error"></span>
                   </div>
 
                   <div>
                     <label for="email"> 이메일</label>
-                    <input type="email" name="email" id="email1" />
+                    <input type="email" name="email" id="email" />
                     &#64;
-                    <input type="email" name="email" id="email2" />
+                    <select name="email-select" id="email-select">
+                      <option value="">이메일선택</option>
+                      <option value="gmail">gamil.com</option>
+                      <option value="naver">naver.com</option>
+                      <option value="nate">nate.com</option>
+                      <option value="daum">daum.net</option>
+                    </select>
+                    <span id="email-error"></span>
                   </div>
 
                   <div>
@@ -89,6 +103,7 @@
                       placeholder="비밀번호는 예약 확인시 필요합니다."
                       size="30"
                     />
+                    <span id="pw-error"></span>
                   </div>
                 </div>
                 <p>선택일시: 2023년 3월 8일 (수) 21:00</p>
