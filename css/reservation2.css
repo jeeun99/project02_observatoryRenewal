@@ -168,6 +168,7 @@ input[type="button" i] {
 }
 .btn_process {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .btn_process input:first-of-type {
@@ -194,5 +195,25 @@ input[type="button" i] {
   .inf2 {
     padding-top: 2rem;
     padding-left: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .inf1 {
+    font-size: 12px;
+  }
+  .title span {
+    width: 30%;
+  }
+  .title span:nth-of-type(1) {
+    width: 10%;
+  }
+  .btn_process input:first-of-type {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  input[type="button" i],
+  input[type="submit" i] {
+    width: 100%;
   }
 }

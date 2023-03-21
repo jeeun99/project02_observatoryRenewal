@@ -68,7 +68,16 @@ input[type="submit" i] {
 @media (max-width: 960px) {
   .sec2 {
     display: block;
-    width: 100%;
     margin-top: 80px;
+  }
+  .sec2 h1 {
+    font-size: var(--font20);
+  }
+  li {
+    font-size: 12px;
+  }
+  .groupCau li:first-of-type,
+  .personCau li:first-of-type {
+    font-size: var(--font16);
   }
 }

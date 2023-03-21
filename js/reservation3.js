@@ -6,9 +6,6 @@ const username = document.querySelector("#nm");
 const phoneNum = document.querySelector("#numb");
 const email = document.querySelector("#email");
 const pw = document.querySelector("#pw");
-const teamName = document.querySelector("#team_name");
-const teamNum = document.querySelector("#team_num");
-const teamAge = document.querySelector("#team_age");
 
 $btn_resCom.addEventListener("click", (e) => {
   let errors = false;
@@ -25,6 +22,7 @@ $btn_resCom.addEventListener("click", (e) => {
     errors = false;
   }
 
+  // 이름 입력칸 오류 메시지
   if (username.value.trim() == "") {
     document.querySelector("#username-error").textContent =
       "필수입력사항입니다.";
@@ -32,22 +30,24 @@ $btn_resCom.addEventListener("click", (e) => {
   } else {
     document.querySelector("#username-error").textContent = "";
   }
-  // 전화번호 형식 검사 정규화패턴
+
+  // 전화번호 미입력시 오류메시지 및 전화번호 형식 검사
+  // 값이 비었을 경우 필수입력사항입니다. 값이 있을경우 정규식에 맞는지 판별후 오류메시지 출력
   let numbPattern = /^\d{2,3}-\d{3,4}-\d{4}$/;
   if (phoneNum.value.trim() == "") {
     document.querySelector("#numb-error").textContent = "필수입력사항입니다.";
     errors = true;
   } else {
-    document.querySelector("#numb-error").textContent = "";
-  }
-  if (numbPattern.test(phoneNum.value)) {
-    document.querySelector("#numb-error").textContent = "";
-  } else {
-    document.querySelector("#numb-error").textContent =
-      "양식에 맞지 않습니다. 다시 입력해주세요.";
-    errors = true;
+    if (numbPattern.test(phoneNum.value)) {
+      document.querySelector("#numb-error").textContent = "";
+    } else {
+      document.querySelector("#numb-error").textContent =
+        "양식에 맞지 않습니다. 다시 입력해주세요.";
+      errors = true;
+    }
   }
 
+  // 이메일
   if (email.value.trim() == "") {
     document.querySelector("#email-error").textContent = "필수입력사항입니다.";
     errors = true;
@@ -55,49 +55,12 @@ $btn_resCom.addEventListener("click", (e) => {
     document.querySelector("#email-error").textContent = "";
   }
 
+  // 비밀번호
   if (pw.value.trim() == "") {
     document.querySelector("#pw-error").textContent = "필수입력사항입니다.";
     errors = true;
   } else {
     document.querySelector("#pw-error").textContent = "";
-  }
-
-  if (teamName.value.trim() == "") {
-    document.querySelector("#team_name-error").textContent =
-      "필수입력사항입니다.";
-    errors = true;
-  } else {
-    document.querySelector("#team_name-error").textContent = "";
-  }
-  let NumPattern = /^[0-9]+$/;
-  if (teamNum.value.trim() == "") {
-    document.querySelector("#team_num-error").textContent =
-      "필수입력사항입니다.";
-    errors = true;
-  } else {
-    document.querySelector("#team_num-error").textContent = "";
-  }
-  if (NumPattern.test(teamNum.value)) {
-    document.querySelector("#team_num-error").textContent = "";
-  } else {
-    document.querySelector("#team_num-error").textContent =
-      "숫자만 입력해주세요.";
-    errors = true;
-  }
-
-  if (teamAge.value.trim() == "") {
-    document.querySelector("#team_age-error").textContent =
-      "필수입력사항입니다.";
-    errors = true;
-  } else {
-    document.querySelector("#team_age-error").textContent = "";
-  }
-  if (NumPattern.test(teamAge.value)) {
-    document.querySelector("#team_age-error").textContent = "";
-  } else {
-    document.querySelector("#team_age-error").textContent =
-      "숫자만 입력해주세요.";
-    errors = true;
   }
 
   if (errors) {

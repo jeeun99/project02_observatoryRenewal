@@ -70,6 +70,12 @@ $prev.addEventListener("click", () => {
   dotActive(sliderCount - 1);
 });
 
+// slide loop 적용
+setInterval(() => {
+  nextMove(1);
+  dotActive(1);
+}, 5000);
+
 // 날씨 API 적용
 // 주간 데이터는 유지시키고 오늘의 날씨만 변경시키고 싶었는데 데이터를 미리 저장하는 방법 외에 다른 방법 찾아야할듯. github에선 json파일로 fetch시 적용이 되지 않는 것 같음.
 const Daycontainer = document.querySelector(".todayWeather");

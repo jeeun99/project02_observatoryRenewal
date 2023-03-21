@@ -36,8 +36,8 @@ button {
   overflow: hidden;
 }
 .mw {
-  width: calc(100% - var(--gap));
   max-width: 1440px;
+  width: calc(100% - var(--gap));
   margin: auto;
 }
 .hd {
@@ -232,6 +232,7 @@ button {
   }
   .gnb.on li {
     width: 100%;
+    font-size: 16px;
   }
   .gnb > li:hover > a {
     color: var(--point_white);
