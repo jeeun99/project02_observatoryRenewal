@@ -57,4 +57,4 @@ index페이지에 날씨 API를 직접 연결하여 주간날씨와 일간날씨
 Figma 링크: [이제은\_대전시민천문대](https://www.figma.com/file/2IH0lBwZHnzt5uN3XujnfO/%EC%9D%B4%EC%A0%9C%EC%9D%80_%EB%8C%80%EC%A0%84%EC%8B%9C%EB%AF%BC%EC%B2%9C%EB%AC%B8%EB%8C%80?node-id=0%3A1&t=06WxilQU9liW1DXb-1)
 
 리뉴얼 기획서: 아래 사진 클릭시 프레젠테이션으로 이동됩니다.
-<a href="https://docs.google.com/presentation/d/1PtCZ5NK-zUa_itFyQhS6pijREdrjelmpOlcfts9Cqdo/edit#slide=id.p"><img src="./img/pptimg.png"/></a>
+<a href="https://docs.google.com/presentation/d/1PtCZ5NK-zUa_itFyQhS6pijREdrjelmpOlcfts9Cqdo/edit#slide=id.p"><img src="img/pptImg.png"/></a>
