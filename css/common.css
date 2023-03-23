@@ -45,6 +45,7 @@ button {
   height: 100px;
   display: flex;
   color: var(--color_white);
+  z-index: 100;
 }
 .hd > div {
   display: flex;
@@ -185,7 +186,7 @@ button {
     height: 80px;
     width: 100%;
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     top: 0;
     left: 0;
   }
