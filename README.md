@@ -2,6 +2,8 @@
 
 HTML5, CSS3, JavaScript를 활용한 대전시민천문대 예약과정 리뉴얼 프로젝트
 
+<img src='https://raw.githubusercontent.com/jeeun99/project02_observatoryRenewal/master/img/mockup.jpg' alt='demo' />
+
 ## 🙋 프로젝트 소개
 
 '[대전시민천문대](https://djstar.kr/)' 의 예약 과정 리뉴얼을 진행하였습니다.
